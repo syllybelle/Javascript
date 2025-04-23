@@ -1,0 +1,1642 @@
+<?xml version="1.0"?>
+<ODM xmlns:sdm="http://www.cdisc.org/ns/studydesign/v1.0" xmlns:v4="http://www.viedoc.net/ns/v4" SourceSystemVersion="4.52.7121.34109" SourceSystem="VIEDOC" Originator="PCG Solutions AB" ODMVersion="1.3" AsOfDateTime="2019-08-08T14:51:13.147Z" FileOID="StudyDesign_Example_edit_checks_1.xml" CreationDateTime="2019-06-14T11:57:22" v4:ModifiedSystemVersion="4.52" Granularity="Metadata" FileType="Snapshot" Description="Example edit checks" xmlns="http://www.cdisc.org/ns/odm/v1.3">
+  <Study OID="ec6f66bc-e643-490d-909f-6fdbe56993d1">
+    <GlobalVariables>
+      <StudyName>Example edit checks</StudyName>
+      <StudyDescription>The edit checks in the Example edit checks ODM and accompanying Excel file are examples only. </StudyDescription>
+      <ProtocolName>1</ProtocolName>
+      <v4:SubjectIdGenerator Format="{CountryCode}-{SiteCode}-{SiteSubjectSeqNo:000}" />
+      <v4:ELearningDef OID="EL_SUT" Handle="https://help.viedoc.net/c/94d6f0">
+        <v4:Title>Viedoc User Guide for Site Users</v4:Title>
+        <v4:Description>Text based eLearning for site staff.</v4:Description>
+      </v4:ELearningDef>
+      <v4:ELearningDef OID="EL_MTP" Handle="https://help.viedoc.net/c/c63e06">
+        <v4:Title>Viedoc User Guide for Monitors</v4:Title>
+        <v4:Description>Text based eLearning for monitors.</v4:Description>
+      </v4:ELearningDef>
+      <v4:ELearningDef OID="EL_GDM" Handle="https://help.viedoc.net/c/1994d8">
+        <v4:Title>Viedoc User Guide for Data Managers</v4:Title>
+        <v4:Description>Text based eLearning for Data Managers.</v4:Description>
+      </v4:ELearningDef>
+      <v4:ELearningDef OID="EL_GPM" Handle="https://help.viedoc.net/c/04361f">
+        <v4:Title>Viedoc User Guide for Project Managers</v4:Title>
+        <v4:Description>Text based eLearning for Project Managers.</v4:Description>
+      </v4:ELearningDef>
+      <v4:ELearningDef OID="EL_GMC" Handle="https://help.viedoc.net/c/3108de">
+        <v4:Title>Viedoc User Guide for Medical Coders</v4:Title>
+        <v4:Description>Text based eLearning for Medical Coders.</v4:Description>
+      </v4:ELearningDef>
+    </GlobalVariables>
+    <BasicDefinitions />
+    <MetaDataVersion OID="5.0" Name="1" Description="Example edit checks">
+      <Protocol v4:LastSavedDateTime="2019-05-27T13:11:12.722Z">
+        <Description>
+          <TranslatedText xml:lang="en" />
+        </Description>
+        <StudyEventRef StudyEventOID="NEWPT" OrderNumber="0" Mandatory="No" />
+        <StudyEventRef StudyEventOID="V1" OrderNumber="1" Mandatory="No" />
+        <StudyEventRef StudyEventOID="V2" OrderNumber="2" Mandatory="No" />
+        <StudyEventRef StudyEventOID="AE" Mandatory="No" />
+        <sdm:Summary>
+          <Description />
+        </sdm:Summary>
+        <sdm:Structure>
+          <sdm:ActivityDef OID="ACT_NEWPT_START" v4:StartMethodOID="MD_START_ACT_NEWPT_START" v4:ExcludeDateForm="true" />
+          <sdm:ActivityDef OID="NEWPT" Name="">
+            <FormRef FormOID="DM" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="ACT_V1_START" />
+          <sdm:ActivityDef OID="V1_ASS" Name="">
+            <FormRef FormOID="CHQ" Mandatory="No" />
+            <FormRef FormOID="IE" Mandatory="No" />
+            <FormRef FormOID="VS" Mandatory="No" />
+            <FormRef FormOID="LB" Mandatory="No" />
+            <FormRef FormOID="ML" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V1_MR" Name="">
+            <FormRef FormOID="MR" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V1_PRE" Name="">
+            <FormRef FormOID="IS" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V1_EX" Name="">
+            <FormRef FormOID="EX" Mandatory="No" />
+            <FormRef FormOID="ISR" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V1_POST" Name="">
+            <FormRef FormOID="PK" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V1_DS" Name="">
+            <FormRef FormOID="DS" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="ACT_V2_START" />
+          <sdm:ActivityDef OID="V2_ASS" Name="">
+            <FormRef FormOID="VS" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V2_MR" Name="">
+            <FormRef FormOID="MR" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="V2_DS" Name="">
+            <FormRef FormOID="DS" Mandatory="No" />
+          </sdm:ActivityDef>
+          <sdm:ActivityDef OID="ACT_AE_START" v4:StartMethodOID="MD_START_ACT_AE_START" v4:ExcludeDateForm="true" />
+          <sdm:ActivityDef OID="AE_LOG" Name="">
+            <FormRef FormOID="AE" Mandatory="No" />
+          </sdm:ActivityDef>
+        </sdm:Structure>
+        <sdm:Workflow>
+          <sdm:StudyStart>
+            <Description />
+            <sdm:ActivityRef ActivityOID="NEWPT" />
+          </sdm:StudyStart>
+          <sdm:StudyFinish>
+            <sdm:ActivityRef />
+          </sdm:StudyFinish>
+          <sdm:PathCanFinish>
+            <Description />
+          </sdm:PathCanFinish>
+        </sdm:Workflow>
+        <sdm:Timing />
+      </Protocol>
+      <StudyEventDef OID="NEWPT" Name="Demographics" Repeating="No" Type="Scheduled" Category="AddEvent">
+        <FormRef FormOID="DM" Mandatory="No" />
+        <FormRef FormOID="$EVENT" Mandatory="No" />
+        <sdm:ActivityRef ActivityOID="ACT_NEWPT_START" />
+        <sdm:ActivityRef ActivityOID="NEWPT" />
+      </StudyEventDef>
+      <StudyEventDef OID="V1" Name="Visit 1" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="CHQ" Mandatory="No" />
+        <FormRef FormOID="IE" Mandatory="No" />
+        <FormRef FormOID="VS" Mandatory="No" />
+        <FormRef FormOID="LB" Mandatory="No" />
+        <FormRef FormOID="ML" Mandatory="No" />
+        <FormRef FormOID="MR" Mandatory="No" />
+        <FormRef FormOID="IS" Mandatory="No" />
+        <FormRef FormOID="EX" Mandatory="No" />
+        <FormRef FormOID="ISR" Mandatory="No" />
+        <FormRef FormOID="PK" Mandatory="No" />
+        <FormRef FormOID="DS" Mandatory="No" />
+        <FormRef FormOID="$EVENT" Mandatory="No" />
+        <sdm:ActivityRef ActivityOID="ACT_V1_START" />
+        <sdm:ActivityRef ActivityOID="V1_ASS" />
+        <sdm:ActivityRef ActivityOID="V1_MR" />
+        <sdm:ActivityRef ActivityOID="V1_PRE" />
+        <sdm:ActivityRef ActivityOID="V1_EX" />
+        <sdm:ActivityRef ActivityOID="V1_POST" />
+        <sdm:ActivityRef ActivityOID="V1_DS" />
+      </StudyEventDef>
+      <StudyEventDef OID="V2" Name="Visit 2" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="VS" Mandatory="No" />
+        <FormRef FormOID="MR" Mandatory="No" />
+        <FormRef FormOID="DS" Mandatory="No" />
+        <FormRef FormOID="$EVENT" Mandatory="No" />
+        <sdm:ActivityRef ActivityOID="ACT_V2_START" />
+        <sdm:ActivityRef ActivityOID="V2_ASS" />
+        <sdm:ActivityRef ActivityOID="V2_MR" />
+        <sdm:ActivityRef ActivityOID="V2_DS" />
+      </StudyEventDef>
+      <StudyEventDef OID="AE" Name="Adverse Events" Repeating="Yes" Type="Common">
+        <FormRef FormOID="AE" Mandatory="No" />
+        <FormRef FormOID="$EVENT" Mandatory="No" />
+        <sdm:ActivityRef ActivityOID="ACT_AE_START" />
+        <sdm:ActivityRef ActivityOID="AE_LOG" />
+      </StudyEventDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-05-27T12:47:29.067Z" v4:Created="2019-05-24T13:55:36.481Z" Repeating="No" Name="Drug administration" OID="EX">
+        <ItemGroupRef ItemGroupOID="EXG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-05-29T09:25:59.39Z" v4:Created="2019-05-03T15:39:56.579Z" Repeating="No" Name="End of study" OID="DS">
+        <ItemGroupRef ItemGroupOID="DSG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-05-29T09:30:40.597Z" v4:Created="2019-05-03T15:37:01.251Z" Repeating="No" Name="Eligibility" OID="IE">
+        <ItemGroupRef ItemGroupOID="IEG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-05-29T09:34:47.191Z" v4:Created="2019-05-03T15:19:18.391Z" Repeating="No" Name="Meal time" OID="ML">
+        <ItemGroupRef ItemGroupOID="MLG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="MLG2" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="MLG3" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:12:34.492Z" v4:Created="2019-05-27T12:48:57.522Z" Repeating="No" Name="Immunogenetics " OID="IS">
+        <ItemGroupRef ItemGroupOID="ISG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:14:28.42Z" v4:Created="2019-05-13T07:42:12.463Z" Repeating="No" Name="Injection Site Reaction" OID="ISR">
+        <ItemGroupRef ItemGroupOID="ISRG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:15:32.926Z" v4:Created="2019-05-27T13:05:38.208Z" Repeating="No" Name="MRI" OID="MR">
+        <ItemGroupRef ItemGroupOID="MRG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:25:25.714Z" v4:Created="2019-05-03T15:29:01.285Z" Repeating="No" Name="Pharmocokinetic Sample" OID="PK">
+        <ItemGroupRef ItemGroupOID="PKG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:25:53.186Z" v4:Created="2019-05-03T14:28:48.747Z" Repeating="No" Name="Demographics" OID="DM">
+        <ItemGroupRef ItemGroupOID="DEMOG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="DEMOG2" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="DEMOG3" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-12T14:37:59Z" v4:Created="2019-05-03T14:31:07.649Z" Repeating="No" Name="Vital signs" OID="VS">
+        <ItemGroupRef ItemGroupOID="VDG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="VSG3" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="VSG2" Mandatory="No" CollectionExceptionConditionOID="COND_VSG2_VS" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:RevisedVersion="69.4" v4:AddedVersion="1.0" v4:LastModified="2019-06-13T11:17:40.938Z" v4:Created="2019-05-03T14:24:47.087Z" Repeating="No" Name="Adverse Events" OID="AE">
+        <ItemGroupRef ItemGroupOID="AEG1" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="AEG13" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="AEG2" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="AEG6" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="AEG5" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-14T11:07:49.06Z" v4:Created="2019-05-03T15:23:02.922Z" Repeating="No" Name="Check Questions" OID="CHQ">
+        <ItemGroupRef ItemGroupOID="CHQG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="CHQG2" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:RoleHideShow="show" v4:AddedVersion="1.0" v4:LastModified="2019-06-14T11:57:22.383Z" v4:Created="2019-05-03T15:13:08.578Z" Repeating="No" Name="Lab assessments" OID="LB">
+        <ItemGroupRef ItemGroupOID="LBG1" Mandatory="No" v4:AddedVersion="1.0">
+          <v4:Layout DisplayThumbnail="none" />
+        </ItemGroupRef>
+        <ItemGroupRef ItemGroupOID="LBG2" Mandatory="No" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+        </ItemGroupRef>
+      </FormDef>
+      <FormDef v4:LastModified="2019-08-08T14:51:13.147Z" v4:Created="2019-08-08T14:51:13.147Z" Repeating="No" Name="$EVENT" OID="$EVENT">
+        <ItemGroupRef ItemGroupOID="EventDateGroup" Mandatory="No" />
+      </FormDef>
+      <ItemGroupDef OID="EXG1" Name="EXG1" Repeating="No">
+        <ItemRef ItemOID="EXDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="EXSTTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="EXENTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="DSG1" Name="DSG1" Repeating="No">
+        <ItemRef ItemOID="DSSTDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="DTHDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="IEG1" Name="IEG1" Repeating="No">
+        <ItemRef ItemOID="IEYN" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="MLG1" Name="MLG1" Repeating="No">
+        <Description>
+          <TranslatedText xml:lang="en">Breakfast</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="BRKFSTDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="BRKFSTTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="MLG2" Name="MLG2" Repeating="No">
+        <Description>
+          <TranslatedText xml:lang="en">Lunch</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="LUNCHDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="LUNCHTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="MLG3" Name="MLG3" Repeating="No">
+        <Description>
+          <TranslatedText xml:lang="en">Dinner</TranslatedText>
+        </Description>
+        <ItemRef ItemOID="DINNDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="DINNTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="ISG1" Name="ISG1" Repeating="No">
+        <ItemRef ItemOID="ISDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="ISTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="ISRG1" Name="ISRG1" Repeating="No">
+        <ItemRef ItemOID="ISRPRE" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="730" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="left" />
+        </ItemRef>
+        <ItemRef ItemOID="ISRPOST" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="left" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="MRG1" Name="MRG1" Repeating="No">
+        <ItemRef ItemOID="MRDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="PKG1" Name="PKG1" Repeating="No">
+        <ItemRef ItemOID="PKDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="PKTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="PKKIT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="DEMOG1" Name="DEMOG1" Repeating="No">
+        <ItemRef ItemOID="DMINIT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout InputWidth="123" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="RFICDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="BRTHYR" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="371" InputWidth="149" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="RFICYN" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="RFICDAT1" Mandatory="Yes" CollectionExceptionConditionOID="COND_RFICDAT1_DM" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="DEMOG2" Name="DEMOG2" Repeating="No">
+        <ItemRef ItemOID="DATSURG" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="DEMOG3" Name="DEMOG3" Repeating="No">
+        <ItemRef ItemOID="COHORT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="VDG1" Name="VDG1" Repeating="No">
+        <ItemRef ItemOID="VSPERF" ImputationMethodOID="MD_VSPERF_VS" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="VSDAT" Mandatory="Yes" CollectionExceptionConditionOID="COND_VSDAT_VS" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="VSTIM" Mandatory="Yes" CollectionExceptionConditionOID="COND_VSTIM_VS" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="VSG3" Name="VSG3" Repeating="No">
+        <ItemRef ItemOID="ORRES_WEIGHT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="100" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="VSG2" Name="VSG2" Repeating="No">
+        <ItemRef ItemOID="VS1" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="758" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="ORRES_SYSBP" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="100" InputWidth="100" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="ORRES_DIABP" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="251" InputWidth="100" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="ORRES_HR" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="134" InputWidth="100" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="AEG1" Name="AEG1" Repeating="No">
+        <ItemRef ItemOID="AESPID" MethodOID="MD_AESPID_AE" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="200" InputWidth="75" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AETERM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="511" InputWidth="300" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="AEG13" Name="AEG13" Repeating="No">
+        <ItemRef ItemOID="AESTDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="200" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AESTTIM" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="175" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AEONGO" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="220" LabelWidth="252" InputWidth="203" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AEENDAT" Mandatory="Yes" CollectionExceptionConditionOID="COND_AEENDAT_AE" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="200" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AEENTIM" Mandatory="Yes" CollectionExceptionConditionOID="COND_AEENTIM_AE" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="175" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="AEG2" Name="AEG2" Repeating="No">
+        <ItemRef ItemOID="AESER" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="254" LabelWidth="246" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="AESERCAT" Mandatory="Yes" CollectionExceptionConditionOID="COND_AESERCAT_AE" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="400" InputWidth="409" Orientation="vertical" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="AEG6" Name="AEG6" Repeating="No">
+        <ItemRef ItemOID="AEOUT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="234" LabelWidth="242" InputWidth="288" Orientation="vertical" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="AEG5" Name="AEG5" Repeating="No">
+        <ItemRef ItemOID="AECOVAL" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="366" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="CHQG1" Name="CHQG1" Repeating="No">
+        <ItemRef ItemOID="AEYN" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="CHQG2" Name="CHQG2" Repeating="No">
+        <ItemRef ItemOID="PZCHK" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Width="453" Orientation="vertical" LabelPosition="top" ChoiceWrapText="true" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="LBG1" Name="LBG1" Repeating="No">
+        <ItemRef ItemOID="LBDAT" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="LBG2" Name="LBG2" Repeating="No">
+        <ItemRef ItemOID="ORRES_HGB" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout InputWidth="100" Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <ItemRef ItemOID="ORNR_HGB" Mandatory="Yes" v4:RoleHideShow="show" v4:AddedVersion="1.0">
+          <v4:Layout Orientation="horizontal" LabelPosition="top" DisplayThumbnail="none" />
+        </ItemRef>
+        <v4:Layout Width="full" Spacing="wide" DisplayThumbnail="none" />
+      </ItemGroupDef>
+      <ItemGroupDef OID="EventDateGroup" Name="EventDateGroup" Repeating="No">
+        <ItemRef ItemOID="EventProposedDate" Mandatory="No" />
+        <ItemRef ItemOID="EventPlannedDate" Mandatory="No" />
+        <ItemRef ItemOID="EventWindowStartDate" Mandatory="No" />
+        <ItemRef ItemOID="EventWindowEndDate" Mandatory="No" />
+        <ItemRef ItemOID="EventDate" Mandatory="No" />
+      </ItemGroupDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="EXDAT" OID="EXDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Date</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="EXSTTIM" OID="EXSTTIM">
+        <Question>
+          <TranslatedText xml:lang="en">Start time</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="EXENTIM" OID="EXENTIM">
+        <Question>
+          <TranslatedText xml:lang="en">End time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_EXENTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_7
+
+if(EXENTIM != null &amp;&amp; EXSTTIM != null &amp;&amp; EXENTIM &lt;= EXSTTIM)
+{
+	return false;
+}
+return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Stop time of infusion is not after the Start time. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="DSSTDAT" OID="DSSTDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Date of discontinuation</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="DTHDAT" OID="DTHDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_8</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date of death</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_DTHDAT_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_8
+
+if(DTHDAT!=null &amp;&amp; DSSTDAT!=null)
+return days(DTHDAT, DSSTDAT)==0;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date of death is not same as the Date of discontinuation. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" DataType="integer" Name="IEYN" OID="IEYN">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_17</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Is the subject eligible?</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_IEYN_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_17
+
+if(V1.VS.ORRES_WEIGHT == null || V1.VS.ORRES_WEIGHT&gt;80 &amp;&amp; IEYN!=null)
+return IEYN==0;
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Subject weight is not confirmed as ≤ 80kg, but the subject is checked as eligible. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID="CL_IEYN" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="BRKFSTDAT" OID="BRKFSTDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Date</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="BRKFSTTIM" OID="BRKFSTTIM">
+        <Question>
+          <TranslatedText xml:lang="en">Time</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="LUNCHDAT" OID="LUNCHDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_14</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_LUNCHDAT_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_14
+
+if(LUNCHDAT != null &amp;&amp; LUNCHTIM != null &amp;&amp; BRKFSTDAT != null &amp;&amp; BRKFSTTIM != null)
+{
+var aestyr = LUNCHDAT.getFullYear();
+var aestmnth = LUNCHDAT.getMonth();
+var aedat = LUNCHDAT.getDate();
+var aehr = LUNCHTIM.getHours();
+var aemin = LUNCHTIM.getMinutes();
+var ae = new Date(aestyr,aestmnth,aedat,aehr,aemin,00,00);
+var payr = BRKFSTDAT.getFullYear();
+var pamnth = BRKFSTDAT.getMonth();
+var padat = BRKFSTDAT.getDate();
+var pahr = BRKFSTTIM.getHours();
+var pamin = BRKFSTTIM.getMinutes();
+var pa = new Date(payr,pamnth,padat,pahr,pamin,00,00);
+if(ae &lt;= pa)
+	return false;
+else return true;
+}
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">The lunch time is not after the breakfast time. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="LUNCHTIM" OID="LUNCHTIM">
+        <Question>
+          <TranslatedText xml:lang="en">Time</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="DINNDAT" OID="DINNDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Date</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="DINNTIM" OID="DINNTIM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_15</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_DINNTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_15
+
+if(DINNDAT != null &amp;&amp; DINNTIM != null)
+{
+var a = null, b = null;
+if(LUNCHDAT != null &amp;&amp; LUNCHTIM != null)
+{
+	var a = LUNCHDAT;
+	var b = LUNCHTIM;
+}
+else if(BRKFSTDAT != null &amp;&amp; BRKFSTTIM != null &amp;&amp; (LUNCHDAT == null || LUNCHTIM == null))
+{
+	var a = BRKFSTDAT;
+	var b = BRKFSTTIM;
+}
+if(a != null &amp;&amp; b != null)
+{
+var aestyr = DINNDAT.getFullYear();
+var aestmnth = DINNDAT.getMonth();
+var aedat = DINNDAT.getDate();
+var aehr = DINNTIM.getHours();
+var aemin = DINNTIM.getMinutes();
+var ae = new Date(aestyr,aestmnth,aedat,aehr,aemin,00,00);
+var payr = a.getFullYear();
+var pamnth = a.getMonth();
+var padat = a.getDate();
+var pahr = b.getHours();
+var pamin = b.getMinutes();
+var pa = new Date(payr,pamnth,padat,pahr,pamin,00,00);
+if(ae &lt;= pa)
+{
+	return false;
+}
+}
+}
+return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">The dinner time is not after the lunch time and/or the breakfast time. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="ISDAT" OID="ISDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Date of sample collection</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="ISTIM" OID="ISTIM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_16</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Time of sample collection</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ISTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_16
+
+function create_date_and_time(day, time)
+{
+	var year = day.getFullYear();
+	var month = day.getMonth();
+	var date = day.getDate();
+	var hour = time.getHours();
+	var minute = time.getMinutes();
+	
+	return (new Date(year, month, date, hour, minute, 00, 00));
+}
+if(StudyEventDefId == "V1" &amp;&amp; ISTIM != null &amp;&amp; ISDAT != null &amp;&amp; $THIS.EX.EXDAT != null &amp;&amp; $THIS.EX.EXSTTIM != null)
+{
+	var diff = (create_date_and_time($THIS.EX.EXDAT, $THIS.EX.EXSTTIM) - create_date_and_time(ISDAT, ISTIM))/60000;
+	if(diff &lt; 0 || diff &gt; 30)
+	{
+		return false;
+	}
+}
+return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date and time of sample collection is not within 30 minutes prior to the Date and start time of the drug administration. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef Length="100" DataType="base64Binary" Name="ISRPRE" OID="ISRPRE">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_11</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Area pre-injection</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ISRPRE_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_11
+
+if(ISRPRE!=null)
+return ISRPRE.FileSize&lt;100000;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">File too big.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef Length="100" DataType="base64Binary" Name="ISRPOST" OID="ISRPOST">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_12</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Area post-injection</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ISRPOST_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_12
+
+if(ISRPRE!=null &amp;&amp; ISRPOST!=null)
+return ISRPOST.FileHash!=ISRPRE.FileHash;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Images are the same.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="datetime" Name="MRDAT" OID="MRDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_12</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date of MRI</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_MR1_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_12
+
+var TDAT = new Date(V1.MR.MRDAT);
+if(MRDAT &amp;&amp; ActivityDefId!="V1_MR"){
+if(MRDAT.getHours() &gt;= TDAT.getHours())return (((MRDAT.getHours()*60)+MRDAT.getMinutes())-((TDAT.getHours()*60)+TDAT.getMinutes()))&lt;=120;
+else return (((TDAT.getHours()*60)+TDAT.getMinutes())-((MRDAT.getHours()*60)+MRDAT.getMinutes()))&lt;=120;}
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">All MRI visits to be performed at the same time during the day (plus/minus 2 hours)</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="date" Name="PKDAT" OID="PKDAT">
+        <Question>
+          <TranslatedText xml:lang="en">Sample date</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="PKTIM" OID="PKTIM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_13</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Sample time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_PKTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_13
+
+var a = V1.EX$V1_EX.EXDAT;
+var b = V1.EX$V1_EX.EXSTTIM;
+if(StudyEventDefId == "V1" &amp;&amp; a != null &amp;&amp; b != null &amp;&amp; PKDAT != null &amp;&amp; PKTIM != null)
+{
+var payr = a.getFullYear();
+var pamnt = a.getMonth();
+var padat = a.getDate();
+var pahr = b.getHours();
+var pamin = b.getMinutes();
+var pa = new Date(payr, pamnt, padat, pahr, pamin, 00, 00);
+var pkyr = PKDAT.getFullYear();
+var pkmnt = PKDAT.getMonth();
+var pkdat = PKDAT.getDate();
+var pkhr = PKTIM.getHours();
+var pkmin = PKTIM.getMinutes();
+var pk = new Date(pkyr, pkmnt, pkdat, pkhr, pkmin, 00, 00);
+if((((pk-pa)/60000) &lt; 115) ||(((pk-pa)/60000) &gt; 125) || pk &lt; pa)
+	return false;
+else return true;
+}
+return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date and time of PK blood collection at this time point is not 2 hours (± 5 minutes) after the Date and time of drug administration in drug administration form. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="text" Name="PKKIT" OID="PKKIT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_10</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Kit Number used</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_PKKIT_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_10
+
+var re = /\d{4}/;
+if(PKKIT!=null)
+return re.test(PKKIT)==true &amp;&amp; PKKIT.length==4;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Four-digit number expected.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="text" Name="DMINIT" OID="DMINIT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_7</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Subject initials</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_DMINIT_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_7
+
+var INI = /^[A-Z]([A-Z]|[-])[A-Z]$/
+if(DMINIT!=null)
+return INI.test(DMINIT)==true;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Subject initials are not in the expected format. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="DEMO" v4:MaxValue="Today" DataType="date" Name="RFICDAT" OID="RFICDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_3</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date of informed concent</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_RFICDAT_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_3
+
+var x = new Date(2018, 11, 31);
+if (RFICDAT!=null &amp;&amp; RFICDAT &lt; x)
+return false;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date of Informed Consent is recorded prior to 31-Dec-2018. Please review and correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <Alias Context="ExportLabel" Name="Date of informed concent" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="0" DataType="double" Name="BRTHYR" OID="BRTHYR">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_3</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Year of birth</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_BRTHYR_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_3
+
+BRTHYR &gt;= 1973 &amp;&amp; BRTHYR &lt;= 2019</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Year of birth is not within the expected range. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" DataType="integer" Name="RFICYN" OID="RFICYN">
+        <Question>
+          <TranslatedText xml:lang="en">Did the subject reconsent</TranslatedText>
+        </Question>
+        <CodeListRef CodeListOID="CL_RFICYN" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" v4:MaxValue="Today" DataType="date" Name="RFICDAT1" OID="RFICDAT1">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_1</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date of reconsent</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_RFICDAT1_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_1
+
+if ((RFICDAT1 != null &amp;&amp; RFICDAT != null) &amp;&amp; (RFICDAT1 &lt;= RFICDAT))
+return false;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date of reconsent is not after the Date of informed consent. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" v4:MaxValue="Today" DataType="date" Name="DATSURG" OID="DATSURG">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_2</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date of final surgery</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_DATSURG_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_2
+
+if(V1.$EVENT.EventDate!=null &amp;&amp; DATSURG!=null)
+return (V1.$EVENT.EventDate-DATSURG) &gt;= 0 &amp;&amp; (V1.$EVENT.EventDate-DATSURG) &lt;= 4838400000;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Visit 1 must be within 8 weeks after final surgery.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" DataType="integer" Name="COHORT" OID="COHORT">
+        <Question>
+          <TranslatedText xml:lang="en">Cohort</TranslatedText>
+        </Question>
+        <CodeListRef CodeListOID="CL_COHORT" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" DataType="integer" Name="VSPERF" OID="VSPERF">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_16</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Were vital signs collected?</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_VSPERF_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_16
+
+if(VSPERF!=null &amp;&amp; StudyEventDefId == "V2" &amp;&amp; (NEWPT.DM.COHORT == 2 || NEWPT.DM.COHORT ==3))
+return VSPERF==1;
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Vital signs is required for patients in cohorts 2 and 3.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID="CL_VSPERF" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" v4:MaxValue="Today" DataType="date" Name="VSDAT" OID="VSDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_4</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Date</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_VSDAT_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_4
+
+if(VSDAT!=null)
+return VSDAT__format == 0;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Date is not complete. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="time" Name="VSTIM" OID="VSTIM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_6</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_VSTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_6
+
+if (VSDAT != null &amp;&amp; VSDAT.toString() == today().toString() )
+{
+if ( VSTIM &gt; now() )
+return false;
+else return true;
+}
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Time is recorded in future. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="0" DataType="double" Name="ORRES_WEIGHT" OID="ORRES_WEIGHT">
+        <Question>
+          <TranslatedText xml:lang="en">Weight</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="statictext" Length="100" DataType="string" Name="VS1" OID="VS1">
+        <Question>
+          <TranslatedText xml:lang="en">&lt;strong&gt;Blood pressure&lt;/strong&gt;</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="0" DataType="double" Name="ORRES_SYSBP" OID="ORRES_SYSBP">
+        <Question>
+          <TranslatedText xml:lang="en">Systolic</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="0" DataType="double" Name="ORRES_DIABP" OID="ORRES_DIABP">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_4</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Diastolic</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ORRES_DIABP_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_4
+
+if(ORRES_SYSBP!=null &amp;&amp; ORRES_DIABP!=null &amp;&amp; ORRES_DIABP &gt;= ORRES_SYSBP)
+return false;
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Diastolic blood pressure is not less than the Systolic blood pressure. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="0" DataType="double" Name="ORRES_HR" OID="ORRES_HR">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_1&lt;br/&gt;
+Ref: Standard Checks_2</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Heart rate</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ORRES_HR_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_1
+
+ORRES_HR &lt; 100</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Confirm tachycardia.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ORRES_HR_1_0_2">
+          <FormalExpression Context="js">//Ref: Standard Checks_2
+
+ORRES_HR &gt; 49</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Confirm bradycardia.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AESPID" SignificantDigits="0" DataType="double" Name="AESPID" OID="AESPID">
+        <Question>
+          <TranslatedText xml:lang="en">Sequence number</TranslatedText>
+        </Question>
+        <Alias Context="ExportLabel" Name="Sponsor-Defined Identifier" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AETERM" DataType="text" Name="AETERM" OID="AETERM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_9</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Description of Adverse Event</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AETERM_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_9
+
+var re = /^[A-Za-z0-9 ]*[A-Za-z0-9 ][A-Za-z0-9 ]*$/;
+if(AETERM!=null)
+return re.test(AETERM);
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Only letters and numbers are allowed.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <Alias Context="ExportLabel" Name="Reported Term for the Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AESTDAT" v4:MaxValue="Today" DataType="date" Name="AESTDAT" OID="AESTDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_9&lt;br/&gt;
+Ref: Date and Time Checks_10</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Start Date</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AESTDAT_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_9
+
+if(AESTDAT!=null &amp;&amp; NEWPT.DM.RFICDAT!=null)
+return AESTDAT - NEWPT.DM.RFICDAT &gt;= 0;
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Start date of adverse event is not on or after the Date of Informed Consent. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AESTDAT_1_0_2">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_10
+
+if(AESTDAT!=null &amp;&amp; $LAST.DS.DSSTDAT!=null)
+return AESTDAT - $LAST.DS.DSSTDAT &lt;= 0;
+else return true;
+</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Start date of adverse event is not on or before the Date of discontinuation in End of Study form. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <Alias Context="ExportLabel" Name="Start Date of Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AESTTIM" DataType="time" Name="AESTTIM" OID="AESTTIM">
+        <Question>
+          <TranslatedText xml:lang="en">Start Time</TranslatedText>
+        </Question>
+        <Alias Context="ExportLabel" Name="Start Time of Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" SASFieldName="AEONGO" DataType="integer" Name="AEONGO" OID="AEONGO">
+        <Question>
+          <TranslatedText xml:lang="en">Is the Adverse Event ongoing?</TranslatedText>
+        </Question>
+        <CodeListRef CodeListOID="CL_AEONGO" />
+        <Alias Context="ExportLabel" Name="Ongoing" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AEENDAT" v4:MaxValue="Today" DataType="date" Name="AEENDAT" OID="AEENDAT">
+        <Question>
+          <TranslatedText xml:lang="en">End Date</TranslatedText>
+        </Question>
+        <Alias Context="ExportLabel" Name="End Date of Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SASFieldName="AEENTIM" DataType="time" Name="AEENTIM" OID="AEENTIM">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_11</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">End Time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Hard" v4:OID="RC_AEENTIM_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_11
+
+var a = AEENDAT;
+var b = AEENTIM;
+var c = AESTDAT;
+var d = AESTTIM;
+if (a != null &amp;&amp; b != null &amp;&amp; c != null &amp;&amp; d != null)
+{
+var spyr = a.getFullYear();
+var spmon = a.getMonth();
+var spdat = a.getDate();
+var sphr = b.getHours();
+var spmin = b.getMinutes();
+var sp = new Date(spyr, spmon, spdat, sphr, spmin, 00, 00);
+var styr = c.getFullYear();
+var stmon = c.getMonth();
+var stdat = c.getDate();
+var sthr = d.getHours();
+var stmin = d.getMinutes();
+var st = new Date(styr, stmon, stdat, sthr, stmin, 00, 00);
+if (sp &lt;= st)
+return false;
+else return true;
+}
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">End date and time of adverse event is not on or after the Start date and time. Please correct.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <Alias Context="ExportLabel" Name="End Time of Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" SASFieldName="AESER" DataType="integer" Name="AESER" OID="AESER">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_6</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Is the Adverse Event serious?</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AESER_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_6
+
+if(AEOUT!=null &amp;&amp; AEOUT==1 &amp;&amp; ((AESER!=null &amp;&amp; AESER!= 1) || (AESER==1 &amp;&amp; AESERCAT!=null &amp;&amp; AESERCAT!= 0 &amp;&amp; !AESERCAT.contains(1))))
+return false;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Outcome is selected as "Fatal", but seriousness criteria is not selected as "Death". Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID="CL_AEONGO" />
+        <Alias Context="ExportLabel" Name="Serious Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="checkbox" Length="100" SASFieldName="AESERCAT" DataType="text" Name="AESERCAT" OID="AESERCAT">
+        <Question>
+          <TranslatedText xml:lang="en">&lt;div&gt;Seriousness Criteria&lt;/div&gt;
+&lt;div&gt;&lt;span style="font-size: 0.8em;"&gt;&lt;span style="color: red;"&gt;&lt;span style="color: #006400;"&gt;(Please check all that apply)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</TranslatedText>
+        </Question>
+        <CodeListRef CodeListOID="CL_AESERCAT" />
+        <Alias Context="ExportLabel" Name="Serious Event Description" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" SASFieldName="AEOUT" DataType="integer" Name="AEOUT" OID="AEOUT">
+        <Question>
+          <TranslatedText xml:lang="en">Outcome of the Adverse Event</TranslatedText>
+        </Question>
+        <CodeListRef CodeListOID="CL_AEOUT" />
+        <Alias Context="ExportLabel" Name="Outcome of Adverse Event" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="text" Name="AECOVAL" OID="AECOVAL">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_8</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Comments</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AECOVAL_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_8
+
+var re = /[^\x00-\x7F]+/;
+if(AECOVAL!=null)
+return !re.test(AECOVAL);
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Contains illegal character.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="radio" Length="100" DataType="integer" Name="AEYN" OID="AEYN">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_5</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Has the subject had any adverse events?</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_AEYN_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_5
+
+if(AEYN == 1 &amp;&amp; $FIRST.AE.AESPID == null)
+return false;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Subject has experienced new adverse event and/or there was worsening of concomitant diseases and/or there were changes in the reported adverse events, however there is no record in the Adverse Events log. Please verify.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID="CL_AEYN" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="checkbox" Length="100" DataType="text" Name="PZCHK" OID="PZCHK">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_15</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Check box item with 'none of the above' as an option</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_PZCHK_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_15
+
+if(PZCHK!=null &amp;&amp; PZCHK.contains(99))
+return !PZCHK.contains(1) &amp;&amp; !PZCHK.contains(2) &amp;&amp; !PZCHK.contains(3);
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Illogical!  'None of the above' is selected along with other entries.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID="CL_PZCHK" />
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" DataType="datetime" Name="LBDAT" OID="LBDAT">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Date and Time Checks_5</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Lab sample collection date and time</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_LB1_1_0_1">
+          <FormalExpression Context="js">//Ref: Date and Time Checks_5
+
+if(LBDAT!=null)
+return LBDAT.getHours()!=0 || LBDAT.getMinutes()!=0;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Please confirm collection time at midnight.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" Length="100" SignificantDigits="1" DataType="double" Name="ORRES_HGB" OID="ORRES_HGB">
+        <Description>
+          <TranslatedText xml:lang="en">Ref: Standard Checks_13&lt;br/&gt;
+Ref: Standard Checks_14</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText xml:lang="en">Result Hemoglobin</TranslatedText>
+        </Question>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ORRES_HGB_1_0_1">
+          <FormalExpression Context="js">//Ref: Standard Checks_13
+
+if (ORRES_HGB!= null &amp;&amp; ORNR_HGB!=null)
+return ORRES_HGB &lt;= parseRangeValue(ORNR_HGB).Upper * 3;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Result greater than 3x upper limit.  Fails exclusion criteria.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <RangeCheck SoftHard="Soft" v4:OID="RC_ORRES_HGB_1_0_2">
+          <FormalExpression Context="js">//Ref: Standard Checks_14
+
+if (ORRES_HGB!= null &amp;&amp; ORNR_HGB!=null)
+return ORRES_HGB &gt;= parseRangeValue(ORNR_HGB).Lower / 3;
+else return true;</FormalExpression>
+          <ErrorMessage>
+            <TranslatedText xml:lang="en">Result less than 3x lower limit.  Fails exclusion criteria.</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+      </ItemDef>
+      <ItemDef v4:MinLength="1" v4:HtmlType="range" Length="100" SignificantDigits="0" DataType="text" Name="ORNR_HGB" OID="ORNR_HGB">
+        <Question>
+          <TranslatedText xml:lang="en">Normal range</TranslatedText>
+        </Question>
+      </ItemDef>
+      <ItemDef Length="100" DataType="datetime" Name="EventPlannedDate" OID="EventPlannedDate">
+        <Question />
+      </ItemDef>
+      <ItemDef Length="100" DataType="datetime" Name="EventProposedDate" OID="EventProposedDate">
+        <Question />
+      </ItemDef>
+      <ItemDef Length="100" DataType="datetime" Name="EventWindowStartDate" OID="EventWindowStartDate">
+        <Question />
+      </ItemDef>
+      <ItemDef Length="100" DataType="datetime" Name="EventWindowEndDate" OID="EventWindowEndDate">
+        <Question />
+      </ItemDef>
+      <ItemDef Length="100" DataType="datetime" Name="EventDate" OID="EventDate">
+        <Question />
+      </ItemDef>
+      <CodeList OID="CL_IEYN" Name="CL_IEYN" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_RFICYN" Name="CL_RFICYN" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_COHORT" Name="CL_COHORT" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">1</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText xml:lang="en">2</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText xml:lang="en">3</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_VSPERF" Name="CL_VSPERF" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_AEONGO" Name="CL_AEONGO" DataType="integer" SASFormatName="YESNO">
+        <CodeListItem CodedValue="1" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="0" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_AESERCAT" Name="CL_AESERCAT" DataType="integer" SASFormatName="SERIOUS">
+        <CodeListItem CodedValue="1" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Death</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="2" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Hospitalisation / Prolongation of Hospitalisation</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="3" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Congenital Anomaly / Birth Defect</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="4" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Life-threatening</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="5" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Persistent or Significant Disability / Incapacity</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="6" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Other medically important condition</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_AEOUT" Name="CL_AEOUT" DataType="integer" SASFormatName="OUT">
+        <CodeListItem CodedValue="1" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Fatal</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="2" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Not resolved</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="3" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Resolved</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="4" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Resolved with sequelae</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="5" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Resolving</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+        <CodeListItem CodedValue="99" v4:AddedVersion="1.0">
+          <Decode>
+            <TranslatedText xml:lang="en">Unknown</TranslatedText>
+          </Decode>
+          <Alias Context="OUTPUT" />
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_AEYN" Name="CL_AEYN" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText xml:lang="en">No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <CodeList OID="CL_PZCHK" Name="CL_PZCHK" DataType="integer">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText xml:lang="en">A</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText xml:lang="en">B</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText xml:lang="en">C</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="99">
+          <Decode>
+            <TranslatedText xml:lang="en">None of the above</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <ConditionDef OID="COND_RFICDAT1_DM" Name="COND_RFICDAT1_DM" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="RFICYN" Operator="==" RightOperand="1" />
+      </ConditionDef>
+      <ConditionDef OID="COND_VSDAT_VS" Name="COND_VSDAT_VS" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="VSPERF" Operator="==" RightOperand="1" />
+      </ConditionDef>
+      <ConditionDef OID="COND_VSTIM_VS" Name="COND_VSTIM_VS" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="VSPERF" Operator="==" RightOperand="1" />
+      </ConditionDef>
+      <ConditionDef OID="COND_VSG2_VS" Name="COND_VSG2_VS" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="VSPERF" Operator="==" RightOperand="1" />
+      </ConditionDef>
+      <ConditionDef OID="COND_AEENDAT_AE" Name="COND_AEENDAT_AE" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="AEONGO" Operator="==" RightOperand="0" />
+      </ConditionDef>
+      <ConditionDef OID="COND_AEENTIM_AE" Name="COND_AEENTIM_AE" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <FormalExpression Context="js">AEONGO == 0</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND_AESERCAT_AE" Name="COND_AESERCAT_AE" v4:HideShow="show">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <v4:FormalExpressionSimple LeftOperand="AESER" Operator="==" RightOperand="1" />
+      </ConditionDef>
+      <MethodDef OID="MD_START_ACT_NEWPT_START" Name="MD_START_ACT_NEWPT_START">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <FormalExpression Context="first-data-entry" />
+      </MethodDef>
+      <MethodDef OID="MD_START_ACT_AE_START" Name="MD_START_ACT_AE_START">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <FormalExpression Context="first-data-entry" />
+      </MethodDef>
+      <MethodDef OID="MD_VSPERF_VS" Name="MD_VSPERF_VS">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <FormalExpression Context="js">return 1;</FormalExpression>
+      </MethodDef>
+      <MethodDef OID="MD_AESPID_AE" Name="MD_AESPID_AE">
+        <Description>
+          <TranslatedText xml:lang="en"> </TranslatedText>
+        </Description>
+        <FormalExpression Context="js">return StudyEventRepeatKey;</FormalExpression>
+      </MethodDef>
+      <v4:RolesDef OID="R1" RoleName="Investigator" Avatar="1" Enabled="true">
+        <v4:Permission>AddForm</v4:Permission>
+        <v4:Permission>ResetForm</v4:Permission>
+        <v4:Permission>AddPatient</v4:Permission>
+        <v4:Permission>EditForm</v4:Permission>
+        <v4:Permission>ScheduleEvent</v4:Permission>
+        <v4:Permission>EditEventSchedule</v4:Permission>
+        <v4:Permission>SignEvent</v4:Permission>
+        <v4:Permission>SignForm</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>DeleteSubjects</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Save, sign, reset, delete and export data, resolve queries</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_SUT" />
+      </v4:RolesDef>
+      <v4:RolesDef OID="R2" RoleName="Study Coordinator" Avatar="4" Enabled="true">
+        <v4:Permission>AddForm</v4:Permission>
+        <v4:Permission>ResetForm</v4:Permission>
+        <v4:Permission>AddPatient</v4:Permission>
+        <v4:Permission>EditForm</v4:Permission>
+        <v4:Permission>ScheduleEvent</v4:Permission>
+        <v4:Permission>EditEventSchedule</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>DeleteSubjects</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Save, reset, delete and export data, resolve queries</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_SUT" />
+      </v4:RolesDef>
+      <v4:RolesDef OID="R3" RoleName="Monitor" Avatar="5" Enabled="true">
+        <v4:Permission>QueryRaise</v4:Permission>
+        <v4:Permission>PreQueryPromote</v4:Permission>
+        <v4:Permission>SDV</v4:Permission>
+        <v4:Permission>LockData</v4:Permission>
+        <v4:Permission>ClinicalReview</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>ViewMetrics</v4:Permission>
+        <v4:Permission>CreatePrivateNotes</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Clinical review, SDV, lock and export data, add queries, promote pre-queries</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_MTP" />
+      </v4:RolesDef>
+      <v4:RolesDef OID="R4" RoleName="Project Manager" Avatar="6" Enabled="true">
+        <v4:Permission>ReadOnlyData</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>ViewMetrics</v4:Permission>
+        <v4:Permission>CreatePrivateNotes</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Read-only, export data</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_GPM" />
+      </v4:RolesDef>
+      <v4:RolesDef OID="R5" RoleName="Data Manager" Avatar="8" Enabled="true">
+        <v4:Permission>PreQueryRaise</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>DataReview</v4:Permission>
+        <v4:Permission>ViewMetrics</v4:Permission>
+        <v4:Permission>CreatePrivateNotes</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Data review, export data, add pre-queries</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_GDM" />
+      </v4:RolesDef>
+      <v4:RolesDef OID="R6" RoleName="Medical Coder" Avatar="8" Enabled="true">
+        <v4:Permission>ReadOnlyData</v4:Permission>
+        <v4:Permission>ExportReport</v4:Permission>
+        <v4:Permission>QueryRaise</v4:Permission>
+        <v4:Permission>ViewMedicalCoding</v4:Permission>
+        <v4:Permission>PerformMedicalCoding</v4:Permission>
+        <v4:Permission>ApproveMedicalCoding</v4:Permission>
+        <v4:Description>
+          <TranslatedText xml:lang="en">Read-only, export data, medical coding</TranslatedText>
+        </v4:Description>
+        <v4:ELearningRef ELearningOID="EL_GMC" />
+      </v4:RolesDef>
+      <v4:DesignSettings LastValidated="2019-06-14T12:09:27.226Z">
+        <v4:SourceDataVerificationSettings Scope="All" />
+      </v4:DesignSettings>
+    </MetaDataVersion>
+  </Study>
+</ODM>

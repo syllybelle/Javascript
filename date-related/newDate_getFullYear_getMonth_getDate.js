@@ -1,0 +1,1 @@
+new Date(EventDate.getFullYear(),EventDate.getMonth(),EventDate.getDate())
