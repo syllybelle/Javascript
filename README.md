@@ -19,7 +19,7 @@ A function to calculate the difference between two time variables in minutes.
 [`View`](./time%20diff/README.md)
 
 ### 3. Misc
-A miscellaneous collection of edit checks
+A miscellaneous collection of edit checks, as implemented in the example study.
 
 ## How to Use
 
